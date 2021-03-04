@@ -4,6 +4,7 @@
 package cbgomes;
 
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -53,9 +54,15 @@ public class Account {
 		transaction.setAccount(accunt);
 		transaction.setValue(value);
 		transaction.setTypeTransaction(typeTransaction);
-		transaction.setDateTimeTrasaction(LocalDateTime.now());
+		transaction.setDateTimeTrasaction(formatterDate(LocalDateTime.now()));
 		
 		return transaction;
+	}
+	
+	private String formatterDate(LocalDateTime date) {
+		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		
+		return date.format(formatter);
 	}
 }
 

@@ -19,6 +19,6 @@ public class Transaction {
 
 	private Account account;
 	private Double value;
-	private LocalDateTime dateTimeTrasaction;
+	private String dateTimeTrasaction;
 	private String typeTransaction;
 }

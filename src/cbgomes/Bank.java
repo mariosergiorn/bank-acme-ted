@@ -1,5 +1,7 @@
 package cbgomes;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,7 +10,7 @@ public class Bank {
 	public static void main(String[] args) {
 		
 		List<Transaction> tras = new  ArrayList<>();
-
+		
 		Client mario = new Client();
 		mario.setId(1L);
 		mario.setName("Mario Sergio");
@@ -36,11 +38,8 @@ public class Bank {
 		accountPaulo.setClient(paulo);
 		accountPaulo.setBalance(200.00);
 		
-		
-		
 		accountMario.transferencia(accountMario, 100.00);
 		
-		System.out.println(accountMario);
+		
 	}
-
 }
